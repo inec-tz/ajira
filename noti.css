@@ -1,0 +1,55 @@
+#custom-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.664); /* 70% transparent */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+    animation: fadeIn 0.5s ease;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+    text-align: center;
+    backdrop-filter: blur(5px);
+  }
+
+  #custom-notification .inner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #custom-notification img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  #custom-notification .title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #090120;
+    margin-bottom: 5px;
+  }
+
+  #custom-notification .message {
+    font-size: 16px;
+    color: #570303;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; top: -50px; }
+    to { opacity: 1; top: 0; }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; top: 0; }
+    to { opacity: 0; top: -50px; }
+  }
